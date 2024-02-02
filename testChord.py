@@ -18,7 +18,7 @@ endpoint = "https://japaneast.api.cognitive.microsoft.com/"
 key = "40fe3d4281b34560817dcaf4a1f1822a"
 
 model_id = "domesticDirect-Format2-v5"
-formUrl = "https://www.kansaigaidai.ac.jp/asp/img/pdf/82/7a79c35f7ce0704dec63be82440c8182.pdf"
+formUrl = "https://harmonious-snickerdoodle-2d1128.netlify.app/test.pdf"
 
 document_analysis_client = DocumentAnalysisClient(
     endpoint=endpoint, credential=AzureKeyCredential(key)
