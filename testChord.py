@@ -8,6 +8,7 @@ https://learn.microsoft.com/azure/applied-ai-services/form-recognizer/quickstart
 
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import DocumentAnalysisClient
+import csv
 
 """
 Remember to remove the key from your code when you're done, and never post it publicly. For production, use
@@ -43,7 +44,11 @@ for idx, document in enumerate(result.documents):
 print(data_container) 
     
 
-
+with open('output.csv', mode='w', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Key', 'Value'])
+    for key, value in data_container.items():
+        writer.writerow([key, value]) 
 
 
 # # iterate over tables, lines, and selection marks on each page
